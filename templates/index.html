@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hybrid AI Detector</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/static/logo.png" alt="logo">
+        <span>Hybrid AI Detector</span>
+    </div>
+    <div class="nav-links">
+        <a href="#">How it works</a>
+        <a href="#">API</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Detect <span>AI-Generated</span> Content</h1>
+    <p>Analyze text, images, and documents to determine if they were created by AI or a human.</p>
+
+    <div class="features">
+        <div class="card">Instant Results</div>
+        <div class="card">Trained on Real-World Data</div>
+        <div class="card">Deep Analysis</div>
+    </div>
+</section>
+
+<!-- INPUT SECTION -->
+<section class="input-box">
+
+    <!-- TABS -->
+    <div class="tabs">
+        <button id="tabText" class="tab active" onclick="showTab('text')">
+            <i data-lucide="file-text"></i> Text
+        </button>
+
+        <button id="tabImage" class="tab" onclick="showTab('image')">
+            <i data-lucide="image"></i> Image
+        </button>
+
+        <button id="tabDoc" class="tab" onclick="showTab('doc')">
+            <i data-lucide="file"></i> Document
+        </button>
+    </div>
+
+    <!-- TEXT TAB -->
+    <div id="textTab">
+        <textarea id="text" placeholder="Paste your text here..."></textarea>
+        <button onclick="checkText()" class="analyze-btn">
+            <i data-lucide="scan"></i> Analyze Content
+        </button>
+    </div>
+
+    <!-- IMAGE TAB -->
+    <div id="imageTab" class="hidden">
+        <label class="upload-box">
+            <input type="file" id="imageInput" hidden>
+            <div class="upload-content" id="imagePreviewBox">
+                <div class="icon">
+                    <i data-lucide="upload"></i>
+                </div>
+                <p>Drop an image or click to upload</p>
+                <span>PNG, JPG, WEBP up to 10MB</span>
+            </div>
+        </label>
+
+        <button onclick="checkImage()" class="analyze-btn">
+            <i data-lucide="scan"></i> Analyze Content
+        </button>
+    </div>
+
+    <!-- DOCUMENT TAB -->
+    <div id="docTab" class="hidden">
+        <label class="upload-box">
+            <input type="file" id="docInput" hidden>
+            <div class="upload-content" id="docPreviewBox">
+                <div class="icon">
+                    <i data-lucide="file-text"></i>
+                </div>
+                <p>Drop a document or click to upload</p>
+                <span>PDF, DOCX, TXT up to 20MB</span>
+            </div>
+        </label>
+
+        <button onclick="checkDoc()" class="analyze-btn">
+            <i data-lucide="scan"></i> Analyze Content
+        </button>
+    </div>
+
+</section>
+
+<!-- RESULT SECTION -->
+<section class="result-box">
+
+    <h2>Analysis Result</h2>
+
+    <div id="resultBox">
+        <p style="color:#aaa;">Results will appear here after analysis</p>
+    </div>
+
+</section>
+
+<!-- JS -->
+<script src="/static/script.js"></script>
+
+<!-- ACTIVATE LUCIDE -->
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>

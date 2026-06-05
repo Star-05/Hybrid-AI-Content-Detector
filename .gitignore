@@ -1,0 +1,17 @@
+venv/
+
+__pycache__/
+*.pyc
+
+datasets/
+
+models/bert_results/
+models/bert_model/
+
+models/confusion_matrix.png
+models/roc_curve.png
+models/accuracy.png
+
+.vscode/
+
+.git/

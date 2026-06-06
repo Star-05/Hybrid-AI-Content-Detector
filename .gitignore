@@ -1,17 +1,23 @@
+# Virtual Environment
 venv/
 
+# Python Cache
 __pycache__/
 *.pyc
 
+# Dataset Files
 datasets/
 
+# Training Checkpoints
 models/bert_results/
-models/bert_model/
 
+# Evaluation Graphs
 models/confusion_matrix.png
 models/roc_curve.png
 models/accuracy.png
 
+# VS Code
 .vscode/
 
+# Git
 .git/
